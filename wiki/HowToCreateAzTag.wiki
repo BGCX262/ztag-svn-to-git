@@ -1,0 +1,143 @@
+#summary How to create a zTag
+#labels Phase-Implementation,Featured
+
+= Introduction =
+
+The main idea for the zTag Engine was to be easy to extend, so, you can create any zTag as you want. You can choose to share your zTags submiting to us or, just left at your zTag folder for your use.
+
+= Before you start =
+== How zTags are executed ==
+
+The zTag engine is the /ztag/ztag.php and the rewrite rule of .htaccess help you to simplify the ztag templates use as follow.
+
+http://localhost/ztag/ztag.php?temp=/ztag/sample/helloworld.ztag
+or
+http://localhost/ztag/sample/helloworld.ztag
+
+I prefer to use the second way, because is more transparent and nicer to use than the first one.
+
+The rewrite rules also help you to GET and POST methods, so, you can also refer to .ztag file anytime you want.
+
+== zTags and Functions ==
+
+The zTag uses the XML namespace definition, but you can break the zTag name in two parts (ztag:function):
+  * ztag - The zTag name is the zTag file (Ex. <zdb: have a file /ztag/zdb.inc.php);
+  * function - Inside the zdb.inc.php file, you will find a function in zdb_zexecute function or a zdb_function.
+
+== The zTag package idea ==
+
+Before you open your PHP editor file and start decide to create your own zTag, first think why and what do you want to do. A zTags can be seen as a function or class file, so, remember to create one package for each function.
+
+== Defining zTag Functions and it's Parameters ==
+
+Try think a function as a Function or Class and Parameters as Parameters for Functions or Properties for Classes.
+
+Try to create unique parameters uses as you create each new function, like we can see the use parameter at zDB.
+
+PS: The best way to create your zTag functions and parameters is writing your new zTags and emulating all functions and it's parameters.
+
+= Shhh... Tell me how to create my zTags =
+Okay... Sorry, let's go
+
+== Using the zTag Template File ==
+
+The /ztag/sample/ztagtemplatefile.inc.php is a basic file to create any new zTag, you can also, use any regular zTag file at /ztag folder as sample.
+
+=== The zTag structure ===
+
+{{{ztagtemplatefile_zexecute($tagId, $tagFunction, &$arrayTag, &$arrayTagId, $arrayOrder)}}}
+
+And
+
+{{{ztagtemplatefile_test($tagId, &$arrayTag, &$arrayTagId, $arrayOrder)}}}
+
+The ztag.php player, check if exist a function like ztag_function, if not, it run the zexecute function. You can use the zexecute function for simple and fast functions.
+
+
+=== function parameters ===
+  * *$tagId* - The current id of $arrayTag
+  * *$tagFunction* - The function name of your zTag;
+  * *$arrayTag* - The all zTag disassembled during the ztag.php process;
+  * *$arrayTagId* - List of all Ids, variables and other unique data used during zTag execution;
+  * *$arrayOrder* - Order of all zTags.
+
+=== $arrayTag variable ===
+It with your $tagId, you can reach all zTags and it´s content. You can get this zTag structure searching the ztagBefore at /ztag/ztag.php file.
+
+Let´s talk about the most used during your new zTags:
+  * *ztagParam* - A array with all zTag parameters
+  * *ztagContent* - Content of any <ztag:function></ztag:function>
+  * *ztagContentWidth* - Size of it´s content
+  * *ztagResult* - Result that will be used during the mount process, literally the HTML result of each zTag.
+
+PS: If you do not add any content to ztagResult, the zTag will not be printed.
+
+=== $arrayTagId variable ===
+This array hold all Ids parameters that you use, also each $ variable too. You can see the  array structure at ztag.php file searching the ztagIdTag.
+
+The most used Ids array itens are:
+  * *ztagIdType* - The content Id, like the idTypeFVar
+  * *ztagIdValue* - Value content of this item.
+
+You can refer the array using the literal of each id as follow:
+{{{$arrayTagId[mongoDB][ztagIdValue]}}}
+
+or variables
+
+{{{$arrayTagId["$variable"][ztagIdValue]}}}
+
+== Using the functions ==
+
+You have to decide where you'll program your zTag function. We recommend you to use the for short functions ztagtemplatefile_zexecute.
+
+=== Function ztagtemplatefile_zexecute ===
+We recommend you to maintain the same structure as you get at the template file. You can add other new most used parameters.
+
+{{{
+$arrParam = $arrayTag[$tagId][ztagParam]; <-- *Get all parameters*
+
+$strValue     = $arrParam["value"]; <-- *Get the "value" parameter if exists
+$strVar       = $arrParam["var"]; <-- *Get the "var" parameter if exists
+$strTransform = $arrParam["transform"]; <-- *Get the "transform" parameter if exists
+
+if ($arrayTag[$tagId][ztagContentWidth]) $strContent = $arrayTag[$tagId][ztagContent];
+
+$errorMessage = "";
+
+switch (strtolower($tagFunction)) { <-- *Get the current function name*
+ case "hi": <-- *The function*
+   // Function content
+   break;
+  default:  <-- *The function do not exist*
+    $errorMessage .= "<br />Undefined function \"$tagFunction\"";
+
+}
+
+ztagError($errorMessage, $arrayTag, $tagId);  <-- *General error handler*
+}}}
+
+=== Function ztagtemplatefile_test ===
+This function you already know what function you are executing, but you need the rest of all parameters.
+
+We recomend you follow the same begging of the zexecute function, as follow:
+
+{{{
+$arrParam = $arrayTag[$tagId][ztagParam];
+
+$strValue = $arrParam["value"];
+$strVar   = $arrParam["var"];
+
+$templateContent = $arrayTag[$tagId][ztagContent];
+}}}
+
+= Testing your zTag =
+  * Copy the zTag file to /ztag folder;
+  * Create a ztag file to test adding all zTags you created and it's parameters;
+  * Execute this file;
+  * Fix all errors
+  * Then send it to production.
+
+
+= Now what? =
+
+Well... now you know how you can create your own zTags, we hope you enjoy and join the zTag project, helping us to make it more powerfull.

@@ -1,0 +1,22 @@
+#summary Basic instructions on how to use the zTags - START HERE!
+
+After reading all of this little document (5 minutes) you will be able to create a zTag page in a minute, ok maybe in 10 minutes if you are really slow ;)
+
+If you have any questions, suggestions, feedback or whatever, there is a forum at this address: http://forum.ztag.zyc.com.br
+
+The official website address is: http://ztag.zyc.com.br
+
+If you need a zTag expert you can contact me at: ztag@zyc.com.br
+
+= HowTo =
+
+== Install ==
+Just goto [http://code.google.com/p/ztag/downloads/list Downloads] page and get the last version of zTag Package, extract the db and ztag folders to your web site root and try to execute some tests like.
+
+http://localhost/ztag/ztag.php?temp=/ztag/sample/helloworld.ztag
+
+Or, if you download or add the .htaccess to your root folder too, you can use the extension .ztag as follow
+
+http://localhost/ztag/sample/helloworld.ztag
+
+Now you can check and use all other zTag files at /ztag/sample folder.

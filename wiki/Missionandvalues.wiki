@@ -1,0 +1,11 @@
+#summary Mission and values of zTag project
+
+= Mission and values =
+
+To develop a leading edge open-source development platform, system that implements the latest thinking and best practices web development.
+
+We value:
+
+  * Flexibility, simplicity, and utility in our project;
+  * Teamwork, innovation, and openness in our community;
+  * Modularity, extensibility and maintainability in our code.

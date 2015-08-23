@@ -1,0 +1,21 @@
+#summary Information about how to format code and edit PHP files
+
+As we all know, zTag code could not follow all of these rules, but lets try to keep things the best as we can. If we all became commited to follow these guidelines, and change the files that are not in them; we certainly could make our zTag better. =)
+
+= Files Format =
+  * Save files with ISO-8859-1 encoding
+  * All files must be named with lower case
+  * All PHP files must have the ".php' extension
+  * Files containing only PHP code should not end with "?>" (This helps to avoid the headers already sent error)
+  * All zTag plug-ins files must have prefix "z" and ".inc.php" extension
+
+= Coding information =
+  * Indentation with tabs
+  * The opening brackets should be in the same line of their statements
+  * Classes and functions are named using CamelCase: ClassNameExample
+  * Conditions should not have spaces right after/before the parentheses: if ($var1 === $var2)
+
+
+= Documentation =
+  * Follow the PHPDOC rules, but the first line must be begin with "/`*`+", not "/`**`" as the PHPDOC docs
+  * The zTag zDoc, generates all doc files

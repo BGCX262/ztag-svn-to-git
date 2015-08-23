@@ -1,0 +1,87 @@
+#summary Things TO DO in near future
+#labels Phase-Implementation,TODO
+
+= Introduction =
+
+Here is some things that we think will be necessary in future
+
+
+= Improvements =
+
+== Create a syntax option to validade zTag on disassemble time ==
+The zTag project do not have any way to check if an especific zTag syntax is correct. The idea is to create a way to help the developer to add the syntax during the developing time, without to create another file. I think we can create another "function", that will return the zTag syntax in array in a formated string.
+
+=== zDB:Open string syntax ===
+{{{
+case :open:syntax"
+  return 'zdb:open id="[\w\d]+" driver="(mysql|mssql|pgsql)" host="[\w\d]+" database="[\w\d]+" user="[\w\d]+" password="[\w\d]+"';
+  break;
+}}}
+  * Use the RegEx do validate each parameter;
+
+  * The result of RegEx evaluation will determine if the parameter is optional or not;
+
+  * You do not need to worry with variables info, the preprocessor will add it automatically.
+
+=== zDB:Open array syntax ===
+{{{
+case :open:syntax"
+return array ('zdb' => array (
+                'open' => array(
+                  'id' => '[\w\d]+'
+                  , 'driver' => '(mysql|mssql|pgsql)'
+                  , 'host' => '[\w\d]+'
+                  , 'database' => '[\w\d]+' 
+                  , 'user' => '[\w\d]+'
+                  , 'password' => '[\w\d]+')));
+  break;
+}}}
+
+  * Both ways are the same. The disassembler will convert the string to array;
+
+  * This way save processing time;
+
+  * This array was modeled to be used in a big syntax array file.
+
+By Ruben Zevallos Jr. in 2011-Apr-4
+
+== Read zTag folder file list to array ==
+Every time each zTag is played, the processor have to do 2 checks. 
+  # Check if the zTag check function exist;
+  # if not, it have to check if the zTag file exist too.
+
+The idea is to load all zTag files parameters inside an array one time, saving access disc time.
+
+By Ruben Zevallos Jr. in 2011-Apr-4
+
+== "Install" command to save time on zTag.inc.php file check ==
+Following the same idea to read all zTag file info to an array, the idea is to save more time create an optional "Install" command to:
+
+  # Create a ztagcompiled.inc.php file with all info needed to:
+    * Know about each zTag avaliable;
+    * Every zTag syntax.
+
+By Ruben Zevallos Jr. in 2011-Apr-4
+
+== ztagC - A compiled zTag file ==
+Imagine that you can save some or all of you zTag files, just adding the parameter ?compile=true during the execution?
+
+The idea is to use the disassemble information to create a parameterizable file with:
+  * Domain execution restriction;
+  * IP execution restriction;
+  * Start and/or final date and time available for execution;
+  * Trial date and time available;
+  * Key to validate the execution time;
+  * URL to check if the license is OK;
+  * How many times the URL checker will execute.
+
+The compiler will just generate all of above parameters and save a .ztagc file. The disassembler always will first look for the compiled file, before to look for the regular.
+
+By Ruben Zevallos Jr. in 2011-Apr-4
+
+= Corrections =
+
+== Finish the zDoc tag ==
+The zDoc was started to read the zTag documentation syntax (check at [CodingStandards]) and create all zTag HTML and wiki manual.
+
+Both, wiki and HTML files will have markups to define information from zDoc processing info and user adding info.

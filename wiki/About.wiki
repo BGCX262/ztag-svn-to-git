@@ -1,0 +1,22 @@
+#summary What you need to know about zTags
+
+= Introduction =
+
+The design of zTags always aimed to reduce the need to workload to convert HTML layouts with my CMS.
+
+The current project began with the need to reduce extrelly my development time for my personal projects and consultancies. I came to study many frameworks, but have not found any as productive as zTags.
+
+The proposal of zTags is to minimize development time, leaving free time for the development of business rules, reports and things that really matter. Do not keep doing CRUD, lists and so many other things that we programmers do.
+
+The objective of zTags possbilitar is the full development of any application without the need to write native code, unless it is to create new zTags or new features.
+
+=Who is using the zTags=
+
+==WeZ - Web Agency==
+The http://www.WeZ.com.br zTags use since 2004, since it uses Onyx Manager CMS as basis for their projects.
+
+==Unidental==
+Ruben zTags is using to develop the new ERP Unidental.
+
+==Direito 2==
+The internet portal http://www.Direito2.com.br is the main goal for the zTag use.

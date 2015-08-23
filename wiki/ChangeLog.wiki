@@ -1,0 +1,25 @@
+#labels Featured
+= CHANGELOG =
+
+==0.0.1==
+  * First package created the 0.0.1 ALFA
+  * Samples added. Inscricoes, zTagTests and NoSQL folders
+
+==0.0.2==
+  * Changes to Oracle driver - dbOCI, to fix the Query issue
+  * Var now can also handle array vars
+  * Var can handle packages of data
+  * New zTags zMemCached and zNoSQL
+  * New features for zServer, zEnv, zVar
+  * Samples Sistema, MemCached, Inscricao and some other
+  * Fixes and new comments with all zTags.
+
+
+===Additions===
+  * zNoSQL - zTag to manage NoSQL databases, now just with MongoDB
+  * zMemCached - zTag to use all MemCache servers
+  * dbFirebird - Firebird driver was added and tested
+
+===Bug Fixes and Other Changes===
+  
+  * None fixed yet.

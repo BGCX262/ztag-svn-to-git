@@ -1,0 +1,41 @@
+#summary A roadmap for future zTag releases..
+
+= How to read this roadmap =
+
+This document contains the roadmap for the zTag project. It is important to know that the roadmap is not set in stone. This means that we will probably follow the roadmap very accurately, it may also mean that we might decide to do something else entirely due to changing priorities for example.
+
+*Current Release*: 0.0.1
+  * Create a full install package
+  * Create a minimal documentation usage for all zTags
+  * Create some How To to help you to create your own zTags
+  * Finish the Config.ztag file usage
+  * Change the zDB usage, for some parameters
+
+=== 0.0.2 ===
+  * Finish all DB functions in all the drivers to manage all database functions for all CREATE, ALTER and DROP, tables, Columns, indexes, constraints etc. Also, list Databases, Tables, Columns etc
+  * Finish the zTag syntax evaluator
+  * Create the IF, SWITCH and WHILE zTags to control the zTag execution
+
+=== 0.0.3 ===
+  * Create customer sample app
+  * Create DB manager sample app
+  * Enhance the zTag error handler
+  * Save every zTag result to a $var
+  * new zDoc tag and /Manual files created
+  * Using the Doctrine DBAL to create the zDBAL
+  * zTag to save any variable to file like:
+    * Javascript
+    * Pure Text
+    * JSon
+    * XML
+
+=== 0.0.4 ===
+  * Create a compiled version of ztag code, with ztagc extension. This compiled version will hidden the code from others to read and also'll hav:
+    * option encrypt the code
+    * option add execution restrictions as IP, host hearder, some server id
+    * HTTP address to validate the licence randomlly
+    * Final date for execution
+    * Tool to receive activation code and new parameters
+
+=== Until the 0.0.9 ===
+  * zTags to connect to Twitter, HTTP and other.

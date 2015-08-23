@@ -1,0 +1,18 @@
+#summary A brief report about the zTag history.
+
+  * 1998 - Ruben Zevallos and Fernando Aquino had an idea about the use of tags to facilitate interaction between the HTML and ASP code;
+  * 1998 - Ruben created some models to test ideas using the tags;
+  * 1998 - Ruben developed the CMS Publisher Sites (now Onyx Manager);
+  * 2002 - Ruben created the first zTags to facilitate his development;
+  * 2003 - Ruben rewrote the core of the CMS, including the first version of the processor zTags;
+  * 2005 - Ruben again rewrote the code of zTags processor, including the first intelligent zTags;
+  * 2007 - Ruben rewrote the entire CMS, creating a new concept of zTags, including among other zTagSQL;
+  * 2009 - André Mácola showed a fantastic use of zTags, he wore the zTagSQL creating true "systems". That gave Ruben a realistic view of the use of zTags outside the CMS;
+  * 2008 - Ruben wrote the first version of HTML reader for a project to CRUD manager;
+  * 2009 - Ruben researched the RegEx to create a new processor ztag including new nested zTags;
+  * 2010 - (May) Ruben started the new processor zTags, but he needed to understand how a ztag nested within another;
+  * 2010 - (Sep) Ruben found the solution to the nested zTags and began development of the current project.
+
+The idea of having a system of independent zTags Onyx Manager, came the need to save time in the development of silly things such as CRUDs, Lists, Reports and some forms of treatment.
+
+Today, the zTag project is a mix of ideas from Ruben's programming experience, that includes his 98 framework named HyperTools (http://www.HiperTools.com.br) and other.

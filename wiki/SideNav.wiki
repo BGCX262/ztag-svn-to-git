@@ -1,0 +1,5 @@
+ * [WhatsNew Whats New?]
+  * [GettingStarted Getting Started]
+  * [HowToJoinAProject Join a project]
+  * [FAQ Project Hosting FAQ]
+  * [MakingHostingBetter Making hosting better]

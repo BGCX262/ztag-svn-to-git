@@ -1,0 +1,19 @@
+#summary zTag based Form generator
+#labels Featured
+
+= Introduction =
+
+This is just one of the many available samples entirely made using zTag, this one was developed to help you to create your own zTag forms.
+
+This sample use the zDBAL, that uses the DBAL form Doctrine project.
+
+[http://code.google.com/p/ztag/source/browse/ztag/sample/sistema/ Source]
+
+= Source files =
+
+Here the list of each source file
+  * [http://code.google.com/p/ztag/source/browse/ztag/sample/sistema/mysqlDatabases.ztag mysqlDatabases.ztag] - list all databases
+  * [http://code.google.com/p/ztag/source/browse/ztag/sample/sistema/mysqlTables.ztag mysqlTables.ztag] - list all tables for the current database
+  * [http://code.google.com/p/ztag/source/browse/ztag/sample/sistema/mysqlTable.ztag mysqlTable.ztag] - List all colums for the current table
+  * [http://code.google.com/p/ztag/source/browse/ztag/sample/sistema/mysqlTableForm.ztag mysqlTableForm.ztag] - Generates a complete form
+  * [http://code.google.com/p/ztag/source/browse/ztag/sample/sistema/mysqlTableList.ztag mysqlTableList.ztag] - Generate a list

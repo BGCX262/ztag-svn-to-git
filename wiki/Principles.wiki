@@ -1,0 +1,13 @@
+#summary Principles of zTag project
+
+= Principles =
+
+  * *Modular and extensible* - zTag aims to provide a slim, powerful core that can be readily extended through custom zTag modules;
+
+  * *Quality coding* - High quality, elegant, documented code is a priority over roughed-in functionality;
+
+  * *Standards-based* - zTag supports established and emerging standards. Specific target standards include XHTML;
+
+  * *Open source* - zTag is based on the open source philosophy of collaborative free software development and is licensed under the GPL.  zTag is itself open source and builds on and supports other open source projects.  Specifically, zTag is coded in the open source scripting language PHP and supports as primary data sources the open source database formats MySQL and Postgresql;
+
+  * *Ease of use* - zTag aims for a high standard of usability for developers and users.

@@ -1,0 +1,55 @@
+#summary Frequently Asked Questions.
+
+= Introduction =
+
+Welcome to the FAQ page. Please check here for script errors or tips on helping your zTags script run.
+
+= Frequently Asked Questions =
+
+==Why zTag?==
+When Ruben was the first to create ztag, he was thinking about what to name ... then came the Zevallos Tags, but maybe it was Fernando Aquino who gave the first idea.
+
+==Why was developed yet another language?==
+zTag is not just yet another language, it's a XML based language that helps you to develop your web applications without to use the real PHP code.
+
+You can easy create your own zTag to make your commom tasks saving time and money.
+
+Therefore, zTag is not intended to be a competitor of traditional languages but rather a complement that can be used to increase the productivity of software developers.
+
+==How does zTag engine work?==
+The zTag compiler engine traverses HTML source code and executes actions associated with each command tag. Actions may be immediate, like creating a file, or generating some output, like the lines of code of a program in a given target language.
+
+Command actions are implemented by zTags modules. Such zTags modules implement the different kinds of commands of the language, like execution flow, variable and expression manipulation, etc.. Each zTag module is responsible for it's functions without to affect the other zTags.
+
+==Who has created and developed the first zTags?==
+The zTag project was created and developed by [http://ruben.zevallos.com.br/ Ruben Zevallos Jr.] alone.
+
+==When zTag project started to be developed?==
+The idea of first zTag was tested in 1997, but the new zTags was started in 2004.
+
+==What were the first zTags?==
+The first zTags were created in Onyx 1.5 and Manager were:
+ * {{{<ZTagMainBody>}}}
+ * {{{<ZTagMainTitle>}}}
+ * {{{<ZTagTrackingLine>}}}
+ * {{{<ZTagMenuLeft>}}}
+ * {{{<ZTagMenuRight>}}}
+
+Later came:
+ * {{{<ZTagBox>}}}
+ * {{{<ZTagBox2>}}}
+
+And much more other.
+
+==What is Onyx Manager?==
+Onyx Manager is perhaps one of the first CMS create to manage web pages. The zTags were created to facilitate the work of integrating the content to the layout proposed by the designer.
+
+==Why the DB driver?==
+Before deciding to develop the DB, I researched and tested the PHP PDO and ADODB. The ADODB has a lot of time that is not updated.
+
+Then I met several ORM, as the Doctrine and other, but the DB format still think I'm developing meet the needs of the project zTags.
+
+==How much does zTag engine cost?==
+zTag project is an Open Source project. It is being released with a GNU license. Basically this means that you are free to copy and modify it at will as long as you preserve the original copyright notices and license disclaimers.
+
+zTag was not developed with any commercial intention, so it is released as an Open Source project. This way others can benefit and eventually contribute with bug fixes and enhancements.

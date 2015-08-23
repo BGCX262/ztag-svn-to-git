@@ -1,0 +1,23 @@
+#summary A list of zTags
+
+This is a list of all zTags avaliable at this time and it's plugin file.
+
+|| *zTag* || *Plugin File* || *Description* ||
+||zCode||zcode.inc.php||Help to present any code formated and lined||
+||zCookie||zcookie.inc.php||Manage all Cookies||
+||zDB||zdb.inc.php||Manage the connection with all databases||
+||zEnv||zenv.inc.php||Work with server environment variables||
+||zFile||zfile.inc.php||Manage files||
+||zForm||zForm.inc.php||Help to manage forms||
+||zGet||zget.inc.php||Manage GET information from browser||
+||zHeader||zheader.inc.php||Change all HTTP headers||
+||zHTML||zhtml.inc.php||Help to use all HTML tags with zTags||
+||zLayout||zlayout.inc.php||Help to manage layouts (still in development)||
+||zOM||zom.inc.php||zTags special for Onyx Manager 4.0||
+||zPost||zpost.inc.php||Manage POST information from browser||
+||zRequest||zrequest.inc.php||Manage all request event from browser||
+||zServer||zserver.inc.php||Manage server variables||
+||zSession||zsession.inc.php||Manage session variables||
+||zTag||ztag.inc.php||All zTag legacy from Onyx Manager 3||
+||zTemplate||ztemplate.inc.php||Help to manage templates (still in development)||
+||zVar||zvar.inc.php||Manage all zTag variables||
